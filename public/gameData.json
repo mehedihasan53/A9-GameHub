@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://catholicgamereviews.com/wp-content/uploads/2021/11/CoCloading.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Clash of Clans is a mobile strategy game where players build and upgrade their base, train troops, and battle other players for resources.",
+    "ratings": 4.6,
+    "developer": "Supercell"
+  },
+  {
+    "id": "2",
+    "title": "Minecraft",
+    "coverPhoto": "https://www.minecraft.net/content/dam/minecraftnet/community/share/MCL-Fall-25_Social-Share_570x321.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft is a sandbox game where players can build, explore, and survive in a blocky 3D world.",
+    "ratings": 4.8,
+    "developer": "Mojang"
+  },
+  {
+    "id": "3",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6IrtTzXt3n7Z3qFWXUHdUX1uTO7f6xiq5ZQ&s",
+    "category": "Shooter",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty: Mobile brings the iconic first-person shooter franchise to mobile with multiplayer modes and battle royale.",
+    "ratings": 4.6,
+    "developer": "Activision"
+  },
+  {
+    "id": "4",
+    "title": "Fortnite",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtS4sZv_gqhio9QZzxMRwwuCzSyWUiqZxAvw&s",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite",
+    "description": "Fortnite is a battle royale game where 100 players fight to be the last one standing, with crafting and building mechanics.",
+    "ratings": 4.4,
+    "developer": "Epic Games"
+  },
+  {
+    "id": "5",
+    "title": "Among Us",
+    "coverPhoto": "https://cdn1.epicgames.com/salesEvent/salesEvent/amoguslandscape_2560x1440-3fac17e8bb45d81ec9b2c24655758075",
+    "category": "Multiplayer",
+    "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a multiplayer game where players work together to complete tasks while trying to uncover the impostor among them.",
+    "ratings": 4.4,
+    "developer": "InnerSloth"
+  },
+  {
+    "id": "6",
+    "title": "PUBG Mobile",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjqtyBKXDMP1nQAKnvalJC-lfQwQyv0i7ftg&s",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.pubgmobile.com/",
+    "description": "PUBG Mobile brings the intense battle royale experience to mobile, with large-scale survival combat and various game modes.",
+    "ratings": 4.3,
+    "developer": "Level Infinite"
+  },
+  {
+    "id": "7",
+    "title": "Mobile Legends: Bang Bang",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoS_kDDJtM96L6P3CIyVWzeFHbXryuFhFvrA&s",
+    "category": "MOBA",
+    "downloadLink": "https://www.mobilelegends.com/",
+    "description": "Mobile Legends: Bang Bang is a fast-paced 5v5 multiplayer online battle arena (MOBA) game, perfect for competitive players.",
+    "ratings": 4.4,
+    "developer": "Moonton"
+  },
+  {
+    "id": "8",
+    "title": "Garena Free Fire",
+    "coverPhoto": "https://substackcdn.com/image/fetch/$s_!KtNF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fe70e358e-47f2-4af4-974a-16535d969d72_1200x800.webp",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Garena Free Fire is a fast-paced mobile battle royale game where 50 players fight to be the last one standing in 10-minute matches.",
+    "ratings": 4.2,
+    "developer": "Garena International"
+  },
+  {
+    "id": "9",
+    "title": "SnackVideo",
+    "coverPhoto": "https://play-lh.googleusercontent.com/OU6pqjbF8-KL_nt4s4kv6GP9bRieD1SPAYrN88JdjbnB5gnqFx3XLWp29StRmxhYmeM",
+    "category": "Short Video",
+    "downloadLink": "https://www.snackvideo.com/",
+    "description": "SnackVideo is a short video platform focused on highly engaging and personalized content with an emphasis on local creators and regional trends.",
+    "ratings": 4.1,
+    "developer": "Kuaishou Technology"
+  },
+  {
+    "id": "10",
+    "title": "Subway Surfers",
+    "coverPhoto": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/4da7a102035ecd7c1d56bd9036ccffbc/subway-surfers.png",
+    "category": "Endless Runner",
+    "downloadLink": "https://www.sybo.com/",
+    "description": "Subway Surfers is a fast-paced endless running game where players dodge obstacles while collecting coins and power-ups.",
+    "ratings": 4.6,
+    "developer": "SYBO Games"
+  },
+  {
+    "id": "11",
+    "title": "Ludo King",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLd8zh6xitTBy_RkitAyHiMDxL5ixE3YHkFQ&s",
+    "category": "Board Game",
+    "downloadLink": "https://www.ludoking.com/",
+    "description": "Ludo King is a popular board game app where players roll dice and move their tokens to reach the finish line first.",
+    "ratings": 4.5,
+    "developer": "Gametion Technologies"
+  },
+  {
+    "id": "12",
+    "title": "Hearthstone",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrARqKZlvlyvKHQc2Py3L4fOxkOeWQnAU3NQ&s",
+    "category": "Card Game",
+    "downloadLink": "https://us.battle.net/hearthstone/",
+    "description": "Hearthstone is a digital card game based on the World of Warcraft universe, where players build decks and battle each other.",
+    "ratings": 4.3,
+    "developer": "Blizzard Entertainment"
+  },
+  {
+    "id": "13",
+    "title": "Roblox",
+    "coverPhoto": "https://cdn.mos.cms.futurecdn.net/WUdnquJWWuu73Mbt6Ek3KW.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.roblox.com/",
+    "description": "Roblox is a game creation platform that lets players build and play games created by others.",
+    "ratings": 4.4,
+    "developer": "Roblox Corporation"
+  },
+  {
+    "id": "14",
+    "title": "Angry Birds 2",
+    "coverPhoto": "https://static.wikia.nocookie.net/angrybirds/images/b/be/AB2_App_Icon_July_2023.png/revision/latest/thumbnail/width/360/height/450?cb=20250530125803",
+    "category": "Puzzle",
+    "downloadLink": "https://www.rovio.com/angry-birds-2",
+    "description": "Angry Birds 2 is a fun and challenging puzzle game where players use a slingshot to launch birds at structures and pigs.",
+    "ratings": 4.2,
+    "developer": "Rovio Entertainment"
+  },
+  {
+    "id": "15",
+    "title": "Candy Crush Saga",
+    "coverPhoto": "https://play-lh.googleusercontent.com/JvMhIxuwArVmcMReJQB8PIEB1MIQNMGf9j5i914JtkBrHrA55K-nMUIVlYCa7SXAdHtzLtsycEo6NpXeHFxLwvI",
+    "category": "Puzzle",
+    "downloadLink": "https://king.com/game/candycrush",
+    "description": "Candy Crush Saga is a match-three puzzle game where players swap candies to match three or more and clear the board.",
+    "ratings": 4.5,
+    "developer": "King"
+  },
+  {
+    "id": "16",
+    "title": "Brawl Stars",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7drawxkQr6KZD15EH3ffaiHmVsIlgBlw5mw&s",
+    "category": "Multiplayer",
+    "downloadLink": "https://supercell.com/en/games/brawlstars/",
+    "description": "Brawl Stars is a multiplayer online game where players battle in various modes using unique characters.",
+    "ratings": 4.3,
+    "developer": "Supercell"
+  },
+  {
+    "id": "17",
+    "title": "Clash Royale",
+    "coverPhoto": "https://play-lh.googleusercontent.com/gnSC6s8-6Tjc4uhvDW7nfrSJxpbhllzYhgX8y374N1LYvWBStn2YhozS9XXaz1T_Pi2q",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashroyale/",
+    "description": "Clash Royale is a real-time strategy game where players battle with cards representing troops, spells, and buildings.",
+    "ratings": 4.7,
+    "developer": "Supercell"
+  },
+  {
+    "id": "18",
+    "title": "Dragon Ball Z Dokkan Battle",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjDmyH0D2qLNbvICl98OHGmyACfviI4wH4Xw&s",
+    "category": "Role-Playing",
+    "downloadLink": "https://www.bandainamcoent.com/games/dbz-dokkan-battle",
+    "description": "Dragon Ball Z Dokkan Battle is a puzzle RPG featuring characters from the Dragon Ball Z universe, where players build teams and battle enemies.",
+    "ratings": 4.5,
+    "developer": "Bandai Namco Entertainment"
+  },
+  {
+    "id": "19",
+    "title": "FIFA Mobile",
+    "coverPhoto": "https://www.latestmodapks.com/wp-content/uploads/2023/08/FIFA-Mobile-logo.webp",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/games/fifa/fifa-mobile",
+    "description": "FIFA Mobile is a soccer game where players build teams, play matches, and compete in leagues.",
+    "ratings": 4.2,
+    "developer": "EA Sports"
+  },
+  {
+    "id": "20",
+    "title": "Tetris",
+    "coverPhoto": "https://play-lh.googleusercontent.com/cxQlReocvJ_2rpFqpYm5thst89MD-zkhO4NOATVKJvrsw3xhW9y504TjtTew6e3doDn6",
+    "category": "Puzzle",
+    "downloadLink": "https://tetris.com/",
+    "description": "Tetris is a classic puzzle game where players fit falling blocks together to clear rows and score points.",
+    "ratings": 4.4,
+    "developer": "N3TWORK"
+  }
+]
