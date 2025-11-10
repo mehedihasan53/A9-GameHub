@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
-import PopularGame from "../components/PopularGame";
 import GameDetails from "../Pages/GameDetails";
+import AllApps from "../Pages/AllApps";
 
 export const router = createBrowserRouter([
   {
@@ -12,24 +12,19 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("/gameData.json").then((res) => res.json()),
       },
+
       {
-        path: "/popular-game",
-        element: <PopularGame />,
-        loader: () =>
-          fetch("/gameData.json")
-            .then((res) => res.json())
-            .then((data) =>
-              data.sort((a, b) => b.ratings - a.ratings).slice(0, 3)
-            ),
+        path: "/games",
+        element: <AllApps />,
+        loader: () => fetch("/gameData.json").then((res) => res.json()),
       },
+
       {
         path: "/game/:id",
         element: <GameDetails />,
-        loader: () =>
-          fetch("/gameData.json")
-            .then((res) => res.json())
-            .then((data) => data),
+        loader: () => fetch("/gameData.json").then((res) => res.json()),
       },
     ],
   },

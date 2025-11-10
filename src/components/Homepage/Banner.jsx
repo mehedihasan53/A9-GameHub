@@ -69,7 +69,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative h-96 md:h-[500px] lg:h-[600px] overflow-hidden bg-gray-900">
+    <div className="relative h-84 md:h-[350px] lg:h-[450px] overflow-hidden bg-gray-900">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentSlide}
@@ -138,7 +138,6 @@ const Banner = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Navigation Arrows */}
       <button
         onClick={() => changeSlide(-1)}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-200 z-20 focus:outline-none focus:ring-4 focus:ring-purple-400"
@@ -165,17 +164,6 @@ const Banner = () => {
             }`}
           />
         ))}
-      </div>
-
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700 z-10">
-        <motion.div
-          className="h-full bg-purple-500"
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 5, ease: "linear" }}
-          key={currentSlide}
-        />
       </div>
     </div>
   );

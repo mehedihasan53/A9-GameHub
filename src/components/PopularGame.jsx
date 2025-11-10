@@ -3,37 +3,21 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaStar, FaDownload } from "react-icons/fa";
 
 const PopularGame = () => {
-  const popularGames = useLoaderData() || [];
+  const data = useLoaderData() || [];
+  const popularGames = data.sort((a, b) => b.ratings - a.ratings).slice(0, 3);
   const navigate = useNavigate();
 
   const handleGameClick = (gameId) => {
     navigate(`/game/${gameId}`);
   };
 
-  if (!popularGames || popularGames.length === 0) {
-    return (
-      <section className="py-12 bg-gray-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">No Games Found</h2>
-          <p className="text-gray-300 mb-6">
-            Sorry, we couldn't load any games at the moment.
-          </p>
-          <button
-            onClick={() => navigate("/")}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg"
-          >
-            Back to Home
-          </button>
-        </div>
-      </section>
-    );
-  }
+  if (popularGames.length === 0) return null;
 
   return (
-    <section className="py-12 bg-gray-900">
+    <section className="py-4 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             Popular Games
           </h2>
         </div>
@@ -85,15 +69,6 @@ const PopularGame = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <button
-            onClick={() => navigate("/")}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
-          >
-            Back to Home
-          </button>
         </div>
       </div>
     </section>

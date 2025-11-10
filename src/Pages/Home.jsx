@@ -1,9 +1,12 @@
 import React from "react";
+import PopularGame from "../components/PopularGame";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   return (
     <div>
-      <h3>home page</h3>
+      <PopularGame />
+      <Newsletter />
     </div>
   );
 };

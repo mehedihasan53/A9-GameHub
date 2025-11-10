@@ -3,10 +3,9 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaStar, FaDownload, FaArrowLeft } from "react-icons/fa";
 
 const GameDetails = () => {
-  const games = useLoaderData(); // array of all games
+  const games = useLoaderData();
   const navigate = useNavigate();
 
-  // get the id from URL
   const gameId = window.location.pathname.split("/game/")[1];
   const game = games.find((g) => g.id === gameId);
 
