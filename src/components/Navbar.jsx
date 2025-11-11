@@ -100,7 +100,7 @@ const Navbar = () => {
             // User is logged in - show profile and logout
             <div className="flex items-center gap-4">
               <Link
-                to="/my-profile"
+                to="/user-info/my-profile"
                 className="flex items-center gap-2 text-gray-300 hover:text-purple-400"
               >
                 {user.photoURL ? (

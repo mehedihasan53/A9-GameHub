@@ -6,9 +6,14 @@ import AllApps from "../Pages/AllApps";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ForgotPassword from "../Pages/ForgotPassword";
+
 import AuthLayouts from "../Layouts/AuthLayouts";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage";
+
+import UserInfo from "../Pages/UserInfo";
+import MyProfile from "../Pages/MyProfile";
+import UpdateProfile from "../Pages/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +45,7 @@ export const router = createBrowserRouter([
   {
     path: "auth",
     element: <AuthLayouts />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "login",
@@ -52,6 +58,29 @@ export const router = createBrowserRouter([
       {
         path: "forgot-password",
         element: <ForgotPassword />,
+      },
+    ],
+  },
+  {
+    path: "user-info",
+    element: <UserInfo />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "my-profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "update-profile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
       },
     ],
   },
