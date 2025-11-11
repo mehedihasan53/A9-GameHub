@@ -103,33 +103,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom */}
-      <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <p className="text-gray-400 text-sm mb-4 md:mb-0">
-          &copy; 2025 GameHub. All rights reserved. Made with ❤️ for gamers.
-        </p>
-        <div className="flex space-x-6 text-sm justify-center md:justify-start">
-          <a
-            href="#"
-            className="text-gray-400 hover:text-purple-400 transition"
-          >
-            Privacy
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-purple-400 transition"
-          >
-            Terms
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-purple-400 transition"
-          >
-            Cookies
-          </a>
-        </div>
-      </div>
+      <p className="text-gray-400 text-sm mb-4 md:mb-0 text-center">
+        &copy; 2025 GameHub. Made with ❤️ by Mehedi Hasan for gamers.
+      </p>
     </footer>
   );
 };
