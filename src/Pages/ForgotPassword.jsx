@@ -77,7 +77,7 @@ function ForgotPassword() {
             </div>
           )}
 
-          {/* Email Input */}
+          {/* Email  */}
           <div>
             <label className="block text-gray-300 mb-2">Email Address</label>
             <div className="relative">
