@@ -36,9 +36,11 @@ const Navbar = () => {
   return (
     <div className="w-full bg-gray-800 shadow-md">
       <div className="container mx-auto navbar text-gray-200">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} className="btn btn-ghost lg:hidden text-gray-300">
+        {/* Navbar Start */}
+        <div className="navbar-start flex items-center ">
+          {/* Mobile Dropdown */}
+          <div className="dropdown lg:hidden">
+            <div tabIndex={0} className="btn btn-ghost text-gray-300">
               <svg
                 className="h-5 w-5"
                 fill="none"
@@ -61,8 +63,11 @@ const Navbar = () => {
                 const Icon = link.icon;
                 return (
                   <li key={link.path}>
-                    <Link to={link.path} className="flex items-center gap-2">
-                      <Icon /> {link.name}
+                    <Link
+                      to={link.path}
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <Icon className="text-sm" /> {link.name}
                     </Link>
                   </li>
                 );
@@ -70,14 +75,16 @@ const Navbar = () => {
             </ul>
           </div>
 
+          {/* Logo */}
           <Link
             to="/"
-            className="flex items-center text-2xl font-bold ml-2 bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+            className="flex items-center text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
           >
             <FaGamepad className="mr-2 text-purple-400" /> GameHub
           </Link>
         </div>
 
+        {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             {navLinks.map((link) => {
@@ -96,6 +103,7 @@ const Navbar = () => {
           </ul>
         </div>
 
+        {/* Navbar End */}
         <div className="navbar-end gap-2">
           {user ? (
             <div className="flex items-center gap-4">
@@ -128,13 +136,13 @@ const Navbar = () => {
             <div className="flex gap-2">
               <Link
                 to="/auth/login"
-                className="flex items-center px-5 py-2 rounded-lg font-medium bg-purple-600 hover:bg-purple-700 transition gap-2"
+                className="flex items-center px-3 py-1 rounded-lg font-medium bg-purple-600 hover:bg-purple-700 transition gap-2 text-sm"
               >
                 <FaSignInAlt /> Login
               </Link>
               <Link
                 to="/auth/register"
-                className="flex items-center px-5 py-2 rounded-lg font-medium bg-pink-600 hover:bg-pink-700 transition gap-2"
+                className="flex items-center px-3 py-1 rounded-lg font-medium bg-pink-600 hover:bg-pink-700 transition gap-2 text-sm"
               >
                 <FaUserPlus /> Register
               </Link>
