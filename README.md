@@ -1,16 +1,40 @@
-# React + Vite
+# GameHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An engaging online game library for discovering and supporting game developers. Users can browse indie games, see detailed information, and install games they like.
 
-Currently, two official plugins are available:
+## Live URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Purpose
 
-## React Compiler
+GameHub is designed to showcase indie and popular games, provide detailed information about each game, and connect users with game developers. It also serves as a developer portal to manage and display their games.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+- Browse all available games in a visually appealing grid
+- Detailed game pages with ratings, descriptions, and download links
+- Developer dashboards to showcase published games
+- Authentication system (Login, Register, Forgot Password)
+- Responsive design for desktop and mobile
+- Dynamic tab titles based on current page
+- Animated homepage banner using Framer Motion, React Spring, and GSAP
+- Newsletter subscription section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies & NPM Packages Used
+
+- **React**: Frontend library
+- **React Router Dom**: Routing
+- **Firebase**: Authentication and backend
+- **Tailwind CSS**: Styling
+- **React Icons**: Icon library
+- **Framer Motion**: Animations
+- **GSAP**: Animations
+- **React Spring**: Animations
+- **React Helmet Async**: Dynamic page titles
+- **DaisyUI**: Tailwind CSS components
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mehedihasan53/A9-GameHub.git
+   ```

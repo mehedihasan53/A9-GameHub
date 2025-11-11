@@ -109,12 +109,12 @@ function Login() {
             </div>
           </div>
 
-          {/* Remember + Forgot */}
           <div className="flex items-center justify-between text-sm">
             <label className="flex items-center gap-2 text-gray-300">
               <input type="checkbox" className="w-4 h-4 accent-pink-500" />
               Remember me
             </label>
+
             <button
               type="button"
               onClick={handleForgotPassword}

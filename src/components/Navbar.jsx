@@ -20,7 +20,7 @@ const Navbar = () => {
     { path: "/games", name: "All Games", icon: FaGamepad },
     {
       path: "/developer-dashboard",
-      name: "Developer Dashboard",
+      name: "Developers Dashboard",
       icon: FaUsers,
     },
   ];
@@ -90,7 +90,7 @@ const Navbar = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="flex items-center hover:text-purple-400 gap-1"
+                    className="flex items-center hover:text-purple-400 gap-1 lg:text-lg "
                   >
                     <Icon /> {link.name}
                   </Link>
