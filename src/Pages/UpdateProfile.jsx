@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Provider/AuthProvider";
 import { FaCheck, FaUser, FaImage } from "react-icons/fa";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const UpdateProfile = () => {
+  useDocumentTitle("Update Profile - GameHub");
   const { user, updateUser } = useAuth();
   const [name, setName] = useState(user?.displayName || "");
   const [photo, setPhoto] = useState(user?.photoURL || "");
@@ -26,7 +28,7 @@ const UpdateProfile = () => {
       }, 2000);
     } catch (err) {
       setError("Failed to update profile. Please try again.");
-    //   console.log(err);
+      //   console.log(err);
     } finally {
       setLoading(false);
     }

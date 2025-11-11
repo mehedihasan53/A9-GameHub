@@ -1,14 +1,20 @@
 import React from "react";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { FaStar, FaDownload, FaArrowLeft } from "react-icons/fa";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const GameDetails = () => {
   const data = useLoaderData();
   const navigate = useNavigate();
   const { id } = useParams();
-
   const games = data.games || data || [];
   const game = games.find((g) => g.id === id);
+
+  useDocumentTitle(
+    game
+      ? `${game.title} - ${game.developer} | GameHub`
+      : "Game Not Found | GameHub"
+  );
 
   if (!game) {
     return (

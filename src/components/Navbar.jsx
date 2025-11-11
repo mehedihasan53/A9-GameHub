@@ -34,11 +34,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-gray-800 shadow-md">
+    <div className="w-full bg-gray-800 shadow-md pt-2">
       <div className="container mx-auto navbar text-gray-200">
-        {/* Navbar Start */}
-        <div className="navbar-start flex items-center ">
-          {/* Mobile Dropdown */}
+        <div className="navbar-start flex items-center">
           <div className="dropdown lg:hidden">
             <div tabIndex={0} className="btn btn-ghost text-gray-300">
               <svg
@@ -75,7 +73,6 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Logo */}
           <Link
             to="/"
             className="flex items-center text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -103,7 +100,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Navbar End */}
         <div className="navbar-end gap-2">
           {user ? (
             <div className="flex items-center gap-4">
@@ -136,13 +132,13 @@ const Navbar = () => {
             <div className="flex gap-2">
               <Link
                 to="/auth/login"
-                className="flex items-center px-3 py-1 rounded-lg font-medium bg-purple-600 hover:bg-purple-700 transition gap-2 text-sm"
+                className="flex items-center px-3 py-1 sm:px-5 sm:py-2 rounded-lg font-medium bg-purple-600 hover:bg-purple-700 transition gap-2 text-sm sm:text-base"
               >
                 <FaSignInAlt /> Login
               </Link>
               <Link
                 to="/auth/register"
-                className="flex items-center px-3 py-1 rounded-lg font-medium bg-pink-600 hover:bg-pink-700 transition gap-2 text-sm"
+                className="flex items-center px-3 py-1 sm:px-5 sm:py-2 rounded-lg font-medium bg-pink-600 hover:bg-pink-700 transition gap-2 text-sm sm:text-base"
               >
                 <FaUserPlus /> Register
               </Link>

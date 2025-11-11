@@ -1,8 +1,10 @@
 import React from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaStar, FaDownload } from "react-icons/fa";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const AllApps = () => {
+  useDocumentTitle("All Games - GameHub");
   const allGames = useLoaderData([]);
   const navigate = useNavigate();
 

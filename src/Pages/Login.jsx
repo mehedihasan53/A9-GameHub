@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useAuth } from "../Provider/AuthProvider";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 function Login() {
+  useDocumentTitle("Login-Page");
+
   const [form, setForm] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -42,10 +45,9 @@ function Login() {
     setLoading(false);
   };
 
-  // Forget password-এ email pass করতে হবে
   const handleForgotPassword = () => {
     navigate("/auth/forgot-password", {
-      state: { email: form.email }, // Login page-এর email pass করছি
+      state: { email: form.email },
     });
   };
 
@@ -115,7 +117,7 @@ function Login() {
             </label>
             <button
               type="button"
-              onClick={handleForgotPassword} // Updated: function call
+              onClick={handleForgotPassword}
               className="text-pink-400 hover:text-pink-300"
             >
               Forgot password?

@@ -1,11 +1,13 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { FaStar, FaCode } from "react-icons/fa";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const DeveloperDashboard = () => {
   const devData = useLoaderData();
   const games = Array.isArray(devData) ? devData : [];
   const developerName = games[0]?.developer || "Unknown Developer";
+  useDocumentTitle(`${developerName} - GameHub Developer`);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white py-12">

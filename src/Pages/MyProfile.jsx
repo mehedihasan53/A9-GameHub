@@ -9,8 +9,10 @@ import {
   FaCalendar,
 } from "react-icons/fa";
 import { useAuth } from "../Provider/AuthProvider";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const MyProfile = () => {
+  useDocumentTitle("My Profile - GameHub");
   const { user } = useAuth();
 
   const memberSince = user?.metadata?.creationTime

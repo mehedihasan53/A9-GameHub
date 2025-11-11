@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useAuth } from "../Provider/AuthProvider";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaEnvelope, FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 function ForgotPassword() {
+  useDocumentTitle("Reset Password - GameHub");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -14,7 +16,6 @@ function ForgotPassword() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Login page থেকে email receive করা
   useEffect(() => {
     if (location.state?.email) {
       setEmail(location.state.email);
@@ -39,7 +40,6 @@ function ForgotPassword() {
     setLoading(false);
   };
 
-  // Gmail-এ redirect করার function
   const redirectToGmail = () => {
     window.open("https://mail.google.com", "_blank");
   };
@@ -47,7 +47,6 @@ function ForgotPassword() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-black px-4">
       <div className="w-full max-w-md">
-        {/* Back Button */}
         <button
           onClick={() => navigate("/auth/login")}
           className="flex items-center gap-2 text-pink-400 hover:text-pink-300 mb-6"
@@ -90,7 +89,7 @@ function ForgotPassword() {
                 required
                 placeholder="Enter your email address"
                 className="w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-pink-500 outline-none"
-                disabled={resetSent} // Reset send হওয়ার পরে disable
+                disabled={resetSent}
               />
             </div>
           </div>
@@ -108,7 +107,6 @@ function ForgotPassword() {
               : "Send Reset Link"}
           </button>
 
-          {/* Gmail Button - শুধু reset send হওয়ার পরে show হবে */}
           {resetSent && (
             <button
               type="button"
@@ -120,7 +118,6 @@ function ForgotPassword() {
             </button>
           )}
 
-          {/* Back to Login Link */}
           <p className="text-center text-gray-400 mt-4">
             Remember your password?{" "}
             <Link

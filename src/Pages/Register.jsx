@@ -11,8 +11,10 @@ import {
   FaImage,
 } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 function Register() {
+  useDocumentTitle("Register - GameHub");
   const [data, setData] = useState({
     name: "",
     email: "",
