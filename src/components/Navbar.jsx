@@ -18,7 +18,11 @@ const Navbar = () => {
   const navLinks = [
     { path: "/", name: "Home", icon: FaHome },
     { path: "/games", name: "All Games", icon: FaGamepad },
-    { path: "/developers", name: "Developers", icon: FaUsers },
+    {
+      path: "/developer-dashboard",
+      name: "Developer Dashboard",
+      icon: FaUsers,
+    },
   ];
 
   const handleLogout = async () => {
@@ -32,7 +36,6 @@ const Navbar = () => {
   return (
     <div className="w-full bg-gray-800 shadow-md">
       <div className="container mx-auto navbar text-gray-200">
-        {/* Left - Logo */}
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} className="btn btn-ghost lg:hidden text-gray-300">
@@ -75,7 +78,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Center - Navigation Links */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             {navLinks.map((link) => {
@@ -94,10 +96,8 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Right - Auth Links */}
         <div className="navbar-end gap-2">
           {user ? (
-            // User is logged in - show profile and logout
             <div className="flex items-center gap-4">
               <Link
                 to="/user-info/my-profile"
@@ -125,7 +125,6 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            // User is not logged in - show login/register
             <div className="flex gap-2">
               <Link
                 to="/auth/login"

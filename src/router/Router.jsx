@@ -6,14 +6,14 @@ import AllApps from "../Pages/AllApps";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ForgotPassword from "../Pages/ForgotPassword";
-
 import AuthLayouts from "../Layouts/AuthLayouts";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage";
-
 import UserInfo from "../Pages/UserInfo";
 import MyProfile from "../Pages/MyProfile";
 import UpdateProfile from "../Pages/UpdateProfile";
+import DeveloperLayouts from "../Layouts/DeveloperLayouts";
+import DeveloperDashboard from "../Pages/DeveloperDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +38,23 @@ export const router = createBrowserRouter([
             <GameDetails />
           </PrivateRoute>
         ),
+        loader: () => fetch("/gameData.json").then((res) => res.json()),
+      },
+    ],
+  },
+
+  {
+    path: "developer-dashboard",
+    element: (
+      <PrivateRoute>
+        <DeveloperLayouts />
+      </PrivateRoute>
+    ),
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <DeveloperDashboard />,
         loader: () => fetch("/gameData.json").then((res) => res.json()),
       },
     ],
