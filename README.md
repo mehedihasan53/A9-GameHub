@@ -4,7 +4,7 @@ An engaging online game library for discovering and supporting game developers. 
 
 ## Live URL
 
-[https://voluble-heliotrope-f0aabf.netlify.app/user-info/my-profile](https://fakegamehub.vercel.app)
+[https://voluble-heliotrope-f0aabf.netlify.app/]
 
 ## Purpose
 
