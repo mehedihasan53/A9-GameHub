@@ -14,6 +14,10 @@ import MyProfile from "../Pages/MyProfile";
 import UpdateProfile from "../Pages/UpdateProfile";
 import DeveloperLayouts from "../Layouts/DeveloperLayouts";
 import DeveloperDashboard from "../Pages/DeveloperDashboard";
+import Add from "../Layouts/Add";
+import AddNew from "../Pages/AddNew";
+import MyGame from "../Pages/MyGame";
+import UpdateGameDetails from "../Pages/UpdateGameDetails";
 
 export const router = createBrowserRouter([
   {
@@ -24,12 +28,15 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("/gameData.json").then((res) => res.json()),
+        loader: () =>
+          fetch("http://localhost:3000/addUser").then((res) => res.json()),
       },
+
       {
         path: "games",
         element: <AllApps />,
-        loader: () => fetch("/gameData.json").then((res) => res.json()),
+        loader: () =>
+          fetch("http://localhost:3000/addUser").then((res) => res.json()),
       },
       {
         path: "game/:id",
@@ -38,7 +45,10 @@ export const router = createBrowserRouter([
             <GameDetails />
           </PrivateRoute>
         ),
-        loader: () => fetch("/gameData.json").then((res) => res.json()),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/addUser/${params.id}`).then((res) =>
+            res.json()
+          ),
       },
     ],
   },
@@ -59,25 +69,18 @@ export const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "auth",
     element: <AuthLayouts />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "register",
-        element: <Register />,
-      },
-      {
-        path: "forgot-password",
-        element: <ForgotPassword />,
-      },
+      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
+      { path: "forgot-password", element: <ForgotPassword /> },
     ],
   },
+
   {
     path: "user-info",
     element: <UserInfo />,
@@ -96,6 +99,37 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateProfile />
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
+
+  {
+    path: "new",
+    element: <Add />,
+    children: [
+      {
+        path: "add-new",
+        element: (
+          <PrivateRoute>
+            <AddNew />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "my-game",
+        element: (
+          <PrivateRoute>
+            <MyGame />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "update-game-details/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateGameDetails />
           </PrivateRoute>
         ),
       },

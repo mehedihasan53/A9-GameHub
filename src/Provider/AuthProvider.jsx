@@ -11,7 +11,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 export const useAuth = () => {
   const ctx = useContext(AuthContext);
@@ -72,6 +72,7 @@ const AuthProvider = ({ children }) => {
     updateUser,
     googleSignIn,
     resetPassword,
+    loading,
   };
 
   return (

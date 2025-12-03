@@ -15,15 +15,27 @@ import {
 const Navbar = () => {
   const { user, logout } = useAuth();
 
-  const navLinks = [
-    { path: "/", name: "Home", icon: FaHome },
-    { path: "/games", name: "All Games", icon: FaGamepad },
+  // Define ALL possible navigation links
+  const allNavLinks = [
+    { path: "/", name: "Home", icon: FaHome, isPublic: true },
+    { path: "/games", name: "All Games", icon: FaGamepad, isPublic: true },
     {
       path: "/developer-dashboard",
-      name: "Developers Dashboard",
+      name: "Developers",
       icon: FaUsers,
+      isPublic: false,
     },
+    {
+      path: "/new/add-new",
+      name: "Add New",
+      icon: FaUserPlus,
+      isPublic: false,
+    },
+    { path: "/new/my-game", name: "My Games", icon: FaUser, isPublic: false },
   ];
+
+  // Filter links based on login status
+  const navLinks = allNavLinks.filter((link) => link.isPublic || user);
 
   const handleLogout = async () => {
     try {
@@ -37,8 +49,13 @@ const Navbar = () => {
     <div className="w-full bg-gray-800 shadow-md pt-2">
       <div className="container mx-auto navbar text-gray-200">
         <div className="navbar-start flex items-center">
+          {/* Dropdown Menu (Mobile) */}
           <div className="dropdown lg:hidden">
-            <div tabIndex={0} className="btn btn-ghost text-gray-300">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost text-gray-300"
+            >
               <svg
                 className="h-5 w-5"
                 fill="none"
@@ -55,8 +72,10 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-gray-800 rounded-lg z-10 mt-3 w-52 p-2 shadow"
+              // Added conditional class for z-index
+              className="menu menu-sm dropdown-content bg-gray-800 rounded-lg z-[999] mt-3 w-52 p-2 shadow"
             >
+              {/* Uses the filtered navLinks */}
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -73,6 +92,7 @@ const Navbar = () => {
             </ul>
           </div>
 
+          {/* Logo */}
           <Link
             to="/"
             className="flex items-center text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -81,9 +101,10 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Navbar Center */}
+        {/* Navbar Center (Desktop) */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
+            {/* Uses the filtered navLinks */}
             {navLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -100,8 +121,10 @@ const Navbar = () => {
           </ul>
         </div>
 
+        {/* Navbar End (Auth Buttons/Profile) */}
         <div className="navbar-end gap-2">
           {user ? (
+            // SHOW: Profile and Logout when logged in
             <div className="flex items-center gap-4">
               <Link
                 to="/user-info/my-profile"
@@ -129,6 +152,7 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
+            // SHOW: Login and Register when logged out
             <div className="flex gap-2">
               <Link
                 to="/auth/login"

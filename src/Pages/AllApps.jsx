@@ -27,8 +27,8 @@ const AllApps = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {allGames.map((game) => (
             <div
-              key={game.id}
-              onClick={() => handleGameClick(game.id)}
+              key={game._id}
+              onClick={() => handleGameClick(game._id)}
               className="bg-gray-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer group"
             >
               <div className="relative overflow-hidden rounded-t-xl">

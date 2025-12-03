@@ -2,22 +2,21 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router";
 import Footer from "../components/Footer";
-import Banner from "../components/Homepage/Banner";
-import PopularGame from "../components/PopularGame";
 
-const Root = () => {
+const Add = () => {
   return (
     <div>
-      <header>
-        <Navbar></Navbar>
-        <Banner />
-      </header>
+      <nav>
+        <Navbar />
+      </nav>
       <main>
         <Outlet />
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
 
-export default Root;
+export default Add;
