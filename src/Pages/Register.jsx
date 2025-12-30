@@ -28,7 +28,7 @@ function Register() {
 
   const { signup, googleSignIn } = useAuth();
   const nav = useNavigate();
-  // updated
+  
 
   const change = (e) => setData({ ...data, [e.target.name]: e.target.value });
 
