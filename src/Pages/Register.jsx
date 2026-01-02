@@ -29,7 +29,7 @@ function Register() {
   const { signup, googleSignIn } = useAuth();
   const nav = useNavigate();
 
-  // git update
+  // git update 2026
   const change = (e) => setData({ ...data, [e.target.name]: e.target.value });
 
   const submit = async (e) => {
