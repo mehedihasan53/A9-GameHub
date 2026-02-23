@@ -19,7 +19,7 @@ GameHub is designed to showcase indie and popular games, provide detailed inform
 - Responsive design for desktop and mobile
 - Dynamic tab titles based on current page
 - Animated homepage banner using Framer Motion, React Spring, and GSAP
-- Newsletter subscription section
+- Newsletter subscription section 
 
 ## Technologies & NPM Packages Used
 
