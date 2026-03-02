@@ -32,7 +32,7 @@ GameHub is designed to showcase indie and popular games, provide detailed inform
 - **GSAP**: Animations
 - **React Spring**: Animations
 - **React Helmet Async**: Dynamic page titles
-- **DaisyUI**: Tailwind CSS components
+- **DaisyUI**: Tailwind CSS component
 
 ## Installation
 
