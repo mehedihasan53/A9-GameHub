@@ -10,7 +10,7 @@ An engaging online game library for discovering and supporting game developers. 
 
 GameHub is designed to showcase indie and popular games, provide detailed information about each game, and connect users with game developers. It also serves as a developer portal to manage and display their games.
 
-## Key Features
+## Key Features 
 
 - Browse all available games in a visually appealing grid
 - Detailed game pages with ratings, descriptions, and download links
