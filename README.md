@@ -6,7 +6,7 @@ An engaging online game library for discovering and supporting game developers. 
 
 [https://voluble-heliotrope-f0aabf.netlify.app/]
 
-## Purpose
+## Purpose 
 
 GameHub is designed to showcase indie and popular games, provide detailed information about each game, and connect users with game developers. It also serves as a developer portal to manage and display their games.
 
