@@ -17,7 +17,7 @@ GameHub is designed to showcase indie and popular games, provide detailed inform
 - Developer dashboards to showcase published games
 - Authentication system (Login, Register, Forgot Password)
 - Responsive design for desktop and mobile 
-- Dynamic tab titles based on current page
+- Dynamic tab titles based on current page 
 - Animated homepage banner using Framer Motion, React Spring, and GSAP
 - Newsletter subscription section 
 
